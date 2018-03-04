@@ -37,7 +37,7 @@ public class User {
 	@Column(name = "password")
 	@Length(min = 7, message = "The password must contain at least 7 letters.")
 	@NotEmpty(message = "The password field cannot be left empty.")
-	private String passwordHash;
+	private String password;
 
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
@@ -91,12 +91,12 @@ public class User {
 		this.isActive = isActive;
 	}
 
-	public String getPasswordHash() {
-		return passwordHash;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPasswordHash(String passwordHash) {
-		this.passwordHash = passwordHash;
+	public void setPassword(String passwordHash) {
+		this.password = passwordHash;
 	}
 
 	public Set<Role> getRoles() {
