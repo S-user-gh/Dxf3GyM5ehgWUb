@@ -21,10 +21,10 @@ public class User {
 	@NotEmpty(message = "The u-number field cannot be left empty.")
 	private String uNumber;
 
-	@Column(name = "c_email")
+	@Column(name = "company_email")
 	@Email(message = "Invalid email")
 	@NotEmpty(message = "The e-mail field cannot be left empty.")
-	private String companyEmail;
+	private String email;
 
 	@Column(name = "first_name")
 	private String firstName;
@@ -60,11 +60,11 @@ public class User {
 	}
 
 	public String getCompanyEmail() {
-		return companyEmail;
+		return email;
 	}
 
-	public void setCompanyEmail(String companyEmail) {
-		this.companyEmail = companyEmail;
+	public void setCompanyEmail(String email) {
+		this.email = email;
 	}
 
 	public String getFirstName() {
