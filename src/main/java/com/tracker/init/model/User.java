@@ -59,11 +59,11 @@ public class User {
 		this.uNumber = uNumber;
 	}
 
-	public String getCompanyEmail() {
+	public String getEmail() {
 		return email;
 	}
 
-	public void setCompanyEmail(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 
