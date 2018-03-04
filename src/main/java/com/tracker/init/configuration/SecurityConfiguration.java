@@ -23,10 +23,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private DataSource dataSource;
 
-	@Value("select email, password, active from users where email=?")
+	@Value("select company_email, password, active from users where company_email=?")
 	private String usersQuery;
 	
-	@Value("select u.email, r.role from users u inner join user_role ur on(u.user_id=ur.user_id) inner join roles r on(ur.role_id=r.role_id) where u.email=?")
+	@Value("select u.company_email, r.role from users u inner join user_role ur on(u.user_id=ur.user_id) inner join roles r on(ur.role_id=r.role_id) where u.company_email=?")
 	private String rolesQuery;
 	
 	@Override
